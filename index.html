@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namaste React</title>
+</head>
+
+<body>
+    <div id="root">
+
+        <!-- Display via plain html -->
+        <!-- <h1>Hello World!</h1> -->
+    </div>
+
+    <!-- diplay using JavaScript -->
+    <!-- <script>
+        let heading = document.createElement("h1");
+        heading.innerHTML = "Hello World from JavaScript!";
+
+        let root = document.querySelector("#root");
+        root.appendChild(heading);
+    </script> -->
+
+    <!-- display using React -->
+    <!-- Now our project has React in it, this is the first way of injecting react into our code through CDN links-->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script src="App.js"></script>
+
+</body>
+
+</html>
