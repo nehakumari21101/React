@@ -19,3 +19,17 @@
 - Https
 - Tree Shakingm - remove unused code
 - Different dev and prod bundles
+
+
+#Two types of Export/Import
+
+- Default Export/Import
+
+we can use only one default export in a file 
+export default Component
+import component from "path"
+
+- Named Export/Import
+
+export const Component
+import {Compenent} from "path
