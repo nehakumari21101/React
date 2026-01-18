@@ -33,3 +33,9 @@ import component from "path"
 
 export const Component
 import {Compenent} from "path
+
+
+# React Hooks
+(Normal JS utility functions)
+ - useState() - Superpowerful State in react
+ - useEffect()
