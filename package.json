@@ -1,4 +1,5 @@
 {
+  "proxy": "https://www.swiggy.com",
   "name": "react",
   "version": "1.0.0",
   "description": "\"This is React\"",

@@ -1,1583 +1,1206 @@
-let resList =[
-      {
-        "card": {
-          "card": {
-            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-            "info": {
-              "id": "350701",
-              "name": "Desi Tadka Family Resturant",
-              "cloudinaryImageId": "FOOD_CATALOG/IMAGES/CMS/2024/5/28/af1a8614-1865-4a31-88a9-49ff40f58e10_fe7e5dce-48b7-46cf-98c6-4f5024231f54.JPG",
-              "locality": "Budh Vihar",
-              "areaName": "Golambar",
-              "costForTwo": "₹250 for two",
-              "cuisines": [
-                "North Indian",
-                "Chinese",           
-                "Indian"
-              ],
-              "avgRating": 4,
-              "avgRatingString": "4.0",
-              "sla": {
-                "deliveryTime": 34,
-                "lastMileTravel": 2.7,
-                "serviceability": "SERVICEABLE",
-                "slaString": "30-40 mins",
-                "lastMileTravelString": "2.7 km",
-                "iconType": "ICON_TYPE_EMPTY"
-              },
-              "availability": {
-                "nextCloseTime": "2026-01-14 23:59:00",
-                "opened": true
-              },
-              "badges": {
-
-              },
-              "isOpen": true,
-              "type": "F",
-              "badgesV2": {
-                "entityBadges": {
-                  "textExtendedBadges": {
-
-                  },
-                  "textBased": {
-
-                  },
-                  "imageBased": {
-
-                  }
-                }
-              },
-              "aggregatedDiscountInfoV3": {
-                "header": "ITEMS",
-                "subHeader": "AT ₹69",
-                "logoCtx": {
-                  "text": "BENEFITS"
-                }
-              },
-              "orderabilityCommunication": {
-                "title": {
-
-                },
-                "subTitle": {
-
-                },
-                "message": {
-
-                },
-                "customIcon": {
-
-                },
-                "commsStyling": {
-
-                }
-              },
-              "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                  "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                  "lottie": {
-
-                  },
-                  "video": {
-
-                  }
-                }
-              },
-              "reviewsSummary": {
-
-              },
-              "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-              "restaurantOfferPresentationInfo": {
-
-              },
-              "externalRatings": {
-                "aggregatedRating": {
-                  "rating": "--"
-                }
-              },
-              "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
-              "campaignId": "8fabc0e8-9b40-47e6-9699-aa22b0e805ef"
+let data = [
+  // {
+  //   card: {
+  //     card: {
+  //       "@type":
+  //         "type.googleapis.com/swiggy.gandalf.widgets.v2.CollectionMasthead",
+  //       collectionId: "80445",
+  //       title: "Juice",
+  //       description:
+  //         "Sip on these delicious and healthy juices to refresh your day.",
+  //       imageId:
+  //         "COLLECTIONS/IMAGES/MERCH/2024/7/1/6163d3fc-6b0f-4ca6-886d-6cdcc8314a95_pic",
+  //       aspectRatio: "3.44",
+  //       cta: {
+  //         link: "swiggy://collectionV2?collection_id=80445&tags=layout_Juices_Contextual,juice",
+  //         type: "collectionv2",
+  //       },
+  //       type: "COLLECTION_MASTHEAD_TYPE_IMAGE_WITH_TEXT",
+  //       count: "11 restaurants",
+  //       navBarConfig: {},
+  //     },
+  //   },
+  // },
+  // {
+  //   card: {
+  //     card: {
+  //       "@type":
+  //         "type.googleapis.com/swiggy.gandalf.widgets.v2.InlineViewFilterSortWidget",
+  //       sortConfigs: [
+  //         {
+  //           key: "relevance",
+  //           title: "Relevance (Default)",
+  //           selected: true,
+  //           defaultSelection: true,
+  //         },
+  //         {
+  //           key: "deliveryTimeAsc",
+  //           title: "Delivery Time",
+  //         },
+  //         {
+  //           key: "modelBasedRatingDesc",
+  //           title: "Rating",
+  //         },
+  //         {
+  //           key: "costForTwoAsc",
+  //           title: "Cost: Low to High",
+  //         },
+  //         {
+  //           key: "costForTwoDesc",
+  //           title: "Cost: High to Low",
+  //         },
+  //       ],
+  //       restaurantCount: 11,
+  //       facetList: [
+  //         {
+  //           label: "10 Mins Delivery",
+  //           id: "isRestaurantBolt",
+  //           selection: "SELECT_TYPE_SINGLESELECT",
+  //           facetInfo: [
+  //             {
+  //               label: "10 Mins Delivery",
+  //               id: "isRestaurantBoltfacetquery0",
+  //               analytics: {},
+  //               openFilter: true,
+  //             },
+  //           ],
+  //           viewType: "VIEW_TYPE_FLATTENED",
+  //           subLabel: "Filter by",
+  //           icon: "COLLECTIONS/IMAGES/MERCH/2024/12/18/4b2e8903-0e25-401b-8ede-088491b4cfa0_937977a3-b03b-4a9e-8b6a-24937664d1a9_pic.png",
+  //           selectedIcon:
+  //             "COLLECTIONS/IMAGES/MERCH/2024/12/26/3072d307-2f8e-471c-862d-d426fb93c0bf_4b2e8903-0e25-401b-8ede-088491b4cfa0_937977a3-b03b-4a9e-8b6a-24937664d1a9_pic.png",
+  //         },
+  //         {
+  //           label: "Veg/Non-Veg",
+  //           id: "isVeg",
+  //           selection: "SELECT_TYPE_MULTISELECT",
+  //           facetInfo: [
+  //             {
+  //               label: "Non Veg",
+  //               id: "isVegfacetquery0",
+  //               analytics: {},
+  //               openFilter: true,
+  //             },
+  //             {
+  //               label: "Pure Veg",
+  //               id: "isVegfacetquery1",
+  //               analytics: {},
+  //               openFilter: true,
+  //             },
+  //           ],
+  //           viewType: "VIEW_TYPE_HALF_CARD",
+  //           subLabel: "Filter by",
+  //           openFilter: true,
+  //         },
+  //         {
+  //           label: "Ratings",
+  //           id: "rating",
+  //           selection: "SELECT_TYPE_MULTISELECT",
+  //           facetInfo: [
+  //             {
+  //               label: "Ratings",
+  //               id: "ratingfacetquery0",
+  //               analytics: {},
+  //               openFilter: true,
+  //             },
+  //             {
+  //               label: "Ratings 4.0+",
+  //               id: "ratingfacetquery1",
+  //               analytics: {},
+  //               openFilter: true,
+  //             },
+  //             {
+  //               label: "Ratings 4.5+",
+  //               id: "ratingfacetquery2",
+  //               analytics: {},
+  //               openFilter: true,
+  //             },
+  //           ],
+  //           viewType: "VIEW_TYPE_HALF_CARD",
+  //           subLabel: "Filter by",
+  //           openFilter: true,
+  //         },
+  //         {
+  //           label: "Delivery Time",
+  //           id: "deliveryTime",
+  //           selection: "SELECT_TYPE_MULTISELECT",
+  //           facetInfo: [
+  //             {
+  //               label: "Less than 45 mins",
+  //               id: "deliveryTimefacetquery1",
+  //               analytics: {},
+  //               openFilter: true,
+  //             },
+  //           ],
+  //           viewType: "VIEW_TYPE_HALF_CARD",
+  //           subLabel: "Filter by",
+  //           openFilter: true,
+  //         },
+  //         {
+  //           label: "Cost For Two",
+  //           id: "costForTwo",
+  //           selection: "SELECT_TYPE_MULTISELECT",
+  //           facetInfo: [
+  //             {
+  //               label: "Less than Rs. 300",
+  //               id: "costForTwofacetquery0",
+  //               analytics: {},
+  //               openFilter: true,
+  //             },
+  //             {
+  //               label: "Rs.300 - Rs.600",
+  //               id: "costForTwofacetquery1",
+  //               analytics: {},
+  //               openFilter: true,
+  //             },
+  //             {
+  //               label: "Greater than Rs. 600",
+  //               id: "costForTwofacetquery2",
+  //               analytics: {},
+  //               openFilter: true,
+  //             },
+  //           ],
+  //           viewType: "VIEW_TYPE_HALF_CARD",
+  //           subLabel: "Filter by",
+  //           openFilter: true,
+  //         },
+  //       ],
+  //       widgetId: "inlineFacetFilter",
+  //     },
+  //   },
+  // },
+  {
+    card: {
+      card: {
+        "@type": "type.googleapis.com/swiggy.gandalf.widgets.v2.GridWidget",
+        layout: {
+          rows: 1,
+          widgetPadding: {
+            left: 16,
+            top: 12,
+            right: 16,
+          },
+          widgetTheme: {
+            defaultMode: {
+              backgroundColour: "#FFFFFF",
+              theme: "THEME_TYPE_LIGHT",
             },
-            "analytics": {
-
+            darkMode: {
+              backgroundColour: "#1B3028",
+              theme: "THEME_TYPE_DARK",
             },
-            "cta": {
-              "link": "swiggy://menu?restaurant_id=350701&source=collection&query=Rasgulla",
-              "text": "RESTAURANT_MENU",
-              "type": "DEEPLINK"
+          },
+        },
+        id: "restaurantCountWidget",
+        gridElements: {
+          infoWithStyle: {
+            "@type": "type.googleapis.com/swiggy.gandalf.widgets.v2.TextBoxV2",
+            text: "Restaurants to explore",
+            headerStyling: {
+              textSize: 15,
+              textColor: "text_color_highest_emphasis",
+              textFontName: "FONT_NAME_HEADER_H5",
+              maxLines: 1,
             },
-            "widgetId": "collectionV5RestaurantListWidget"
-          }
-        }
+          },
+        },
       },
-      
-      {
-        "card": {
-          "card": {
-            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-            "info": {
-              "id": "680679",
-              "name": "Bawarchi",
-              "cloudinaryImageId": "466acbe7bf9253c23c7038fea17690d7",
-              "locality": "Kankarbagh",
-              "areaName": "Kankarbagh",
-              "costForTwo": "₹350 for two",
-              "cuisines": [
-                "Indian"
-              ],
-              "avgRating": 3.3,
-              "parentId": "100",
-              "avgRatingString": "3.3",
-              "totalRatingsString": "177",
-              "sla": {
-                "deliveryTime": 20,
-                "lastMileTravel": 1,
-                "serviceability": "SERVICEABLE",
-                "slaString": "20-25 mins",
-                "lastMileTravelString": "1.0 km",
-                "iconType": "ICON_TYPE_EMPTY"
+    },
+  },
+  {
+    card: {
+      card: {
+        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+        info: {
+          id: "304640",
+          name: "Saladspoint",
+          cloudinaryImageId: "6116a2736e177c4a872d11a9d077584a",
+          locality: "Village Samaspur",
+          areaName: "Sector 50",
+          costForTwo: "₹600 for two",
+          cuisines: ["Salads", "Healthy food", "Juices", "Beverages"],
+          avgRating: 4.6,
+          parentId: "8786",
+          avgRatingString: "4.6",
+          totalRatingsString: "3.8K+",
+          promoted: true,
+          adTrackingId:
+            "cid=fa4504e8-d4ad-4439-8b2f-0baf50b8b693~p=0~adgrpid=fa4504e8-d4ad-4439-8b2f-0baf50b8b693#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=304640~plpr=COLLECTION~eid=a35c8a3b-1b05-44cc-ab15-fc0a768a0a5e~srvts=1769227960493~collid=80445",
+          sla: {
+            deliveryTime: 36,
+            lastMileTravel: 6.9,
+            serviceability: "SERVICEABLE",
+            slaString: "35-40 mins",
+            lastMileTravelString: "6.9 km",
+            iconType: "ICON_TYPE_EMPTY",
+          },
+          availability: {
+            nextCloseTime: "2026-01-25 03:00:00",
+            opened: true,
+          },
+          badges: {
+            imageBadges: [
+              {
+                imageId: "High%20Protein/rx%20tag%205.png",
+                description: "High Protein",
               },
-              "availability": {
-                "nextCloseTime": "2026-01-14 23:15:00",
-                "opened": true
+              {
+                imageId: "newg.png",
+                description: "Gourmet",
               },
-              "badges": {
-                "imageBadges": [
+            ],
+          },
+          isOpen: true,
+          type: "F",
+          badgesV2: {
+            entityBadges: {
+              textBased: {},
+              imageBased: {
+                badgeObject: [
                   {
-                    "imageId": "android/static-assets/icons/big_rx.png",
-                    "description": "bolt!"
-                  }
-                ]
-              },
-              "isOpen": true,
-              "aggregatedDiscountInfoV2": {
-
-              },
-              "type": "F",
-              "badgesV2": {
-                "entityBadges": {
-                  "textBased": {
-
-                  },
-                  "imageBased": {
-                    "badgeObject": [
-                      {
-                        "attributes": {
-                          "imageId": "android/static-assets/icons/big_rx.png",
-                          "description": "bolt!"
-                        }
-                      }
-                    ]
-                  },
-                  "textExtendedBadges": {
-
-                  }
-                }
-              },
-              "orderabilityCommunication": {
-                "title": {
-
-                },
-                "subTitle": {
-
-                },
-                "message": {
-
-                },
-                "customIcon": {
-
-                },
-                "commsStyling": {
-
-                }
-              },
-              "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                  "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                  "lottie": {
-
-                  },
-                  "video": {
-
-                  }
-                }
-              },
-              "reviewsSummary": {
-
-              },
-              "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-              "restaurantOfferPresentationInfo": {
-
-              },
-              "externalRatings": {
-                "aggregatedRating": {
-                  "rating": "3.9",
-                  "ratingCount": "2.6K+"
-                },
-                "source": "GOOGLE",
-                "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
-              },
-              "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-            },
-            "analytics": {
-
-            },
-            "cta": {
-              "link": "swiggy://menu?restaurant_id=680679&source=collection&query=Rasgulla",
-              "text": "RESTAURANT_MENU",
-              "type": "DEEPLINK"
-            },
-            "widgetId": "collectionV5RestaurantListWidget"
-          }
-        }
-      },
-      {
-        "card": {
-          "card": {
-            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-            "info": {
-              "id": "124222",
-              "name": "Indian Food Court",
-              "cloudinaryImageId": "FOOD_CATALOG/IMAGES/CMS/2024/5/13/5c1d606b-e7ef-4d41-a782-b2516db84093_555d010d-2d34-49b8-9090-3a48ba2c68d5.jpg",
-              "locality": "Rajendra Nagar",
-              "areaName": "Rajendra Nagar",
-              "costForTwo": "₹300 for two",
-              "cuisines": [
-                "Tandoor"
-              ],
-              "avgRating": 4.1,
-              "parentId": "106520",
-              "avgRatingString": "4.1",
-              "totalRatingsString": "9.9K+",
-              "promoted": true,
-              "adTrackingId": "cid=8f2604b7-6f4b-4a9e-a8c5-a7449c301b74~p=1~adgrpid=8f2604b7-6f4b-4a9e-a8c5-a7449c301b74#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=124222~plpr=COLLECTION~eid=3c6f7c05-a437-4344-a389-826ccd330191~srvts=1768403540713~collid=80388",
-              "sla": {
-                "deliveryTime": 36,
-                "lastMileTravel": 6.3,
-                "serviceability": "SERVICEABLE",
-                "slaString": "35-40 mins",
-                "lastMileTravelString": "6.3 km",
-                "iconType": "ICON_TYPE_EMPTY"
-              },
-              "availability": {
-                "nextCloseTime": "2026-01-14 23:00:00",
-                "opened": true
-              },
-              "badges": {
-
-              },
-              "isOpen": true,
-              "type": "F",
-              "badgesV2": {
-                "entityBadges": {
-                  "textBased": {
-
-                  },
-                  "imageBased": {
-
-                  },
-                  "textExtendedBadges": {
-
-                  }
-                }
-              },
-              "aggregatedDiscountInfoV3": {
-                "header": "ITEMS",
-                "subHeader": "AT ₹119",
-                "logoCtx": {
-                  "text": "BENEFITS"
-                }
-              },
-              "orderabilityCommunication": {
-                "title": {
-
-                },
-                "subTitle": {
-
-                },
-                "message": {
-
-                },
-                "customIcon": {
-
-                },
-                "commsStyling": {
-
-                }
-              },
-              "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                  "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                  "lottie": {
-
-                  },
-                  "video": {
-
-                  }
-                }
-              },
-              "reviewsSummary": {
-
-              },
-              "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-              "restaurantOfferPresentationInfo": {
-
-              },
-              "externalRatings": {
-                "aggregatedRating": {
-                  "rating": "3.8",
-                  "ratingCount": "1.7K+"
-                },
-                "source": "GOOGLE",
-                "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
-              },
-              "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
-              "campaignId": "8f2604b7-6f4b-4a9e-a8c5-a7449c301b74"
-            },
-            "analytics": {
-
-            },
-            "cta": {
-              "link": "swiggy://menu?restaurant_id=124222&source=collection&query=Rasgulla",
-              "text": "RESTAURANT_MENU",
-              "type": "DEEPLINK"
-            },
-            "widgetId": "collectionV5RestaurantListWidget"
-          }
-        }
-      },
-      {
-        "card": {
-          "card": {
-            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-            "info": {
-              "id": "970782",
-              "name": "Awadhi",
-              "cloudinaryImageId": "94e42b1eb227e40846f7baf14bfd3aa7",
-              "locality": "Kankarbagh",
-              "areaName": "Kankarbagh",
-              "costForTwo": "₹300 for two",
-              "cuisines": [
-                "Chinese",
-                "Sweets",
-                "Snacks"
-              ],
-              "avgRating": 4.3,
-              "veg": true,
-              "parentId": "38126",
-              "avgRatingString": "4.3",
-              "totalRatingsString": "3.1K+",
-              "sla": {
-                "deliveryTime": 26,
-                "lastMileTravel": 2.5,
-                "serviceability": "SERVICEABLE",
-                "slaString": "25-30 mins",
-                "lastMileTravelString": "2.5 km",
-                "iconType": "ICON_TYPE_EMPTY"
-              },
-              "availability": {
-                "nextCloseTime": "2026-01-14 22:00:00",
-                "opened": true
-              },
-              "badges": {
-
-              },
-              "isOpen": true,
-              "type": "F",
-              "badgesV2": {
-                "entityBadges": {
-                  "textExtendedBadges": {
-
-                  },
-                  "textBased": {
-
-                  },
-                  "imageBased": {
-
-                  }
-                }
-              },
-              "aggregatedDiscountInfoV3": {
-                "header": "ITEMS",
-                "subHeader": "AT ₹59",
-                "logoCtx": {
-                  "text": "BENEFITS"
-                }
-              },
-              "orderabilityCommunication": {
-                "title": {
-
-                },
-                "subTitle": {
-
-                },
-                "message": {
-
-                },
-                "customIcon": {
-
-                },
-                "commsStyling": {
-
-                }
-              },
-              "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                  "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                  "lottie": {
-
-                  },
-                  "video": {
-
-                  }
-                }
-              },
-              "reviewsSummary": {
-
-              },
-              "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-              "restaurantOfferPresentationInfo": {
-
-              },
-              "externalRatings": {
-                "aggregatedRating": {
-                  "rating": "4.2",
-                  "ratingCount": "66"
-                },
-                "source": "GOOGLE",
-                "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
-              },
-              "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-            },
-            "analytics": {
-
-            },
-            "cta": {
-              "link": "swiggy://menu?restaurant_id=970782&source=collection&query=Rasgulla",
-              "text": "RESTAURANT_MENU",
-              "type": "DEEPLINK"
-            },
-            "widgetId": "collectionV5RestaurantListWidget"
-          }
-        }
-      },
-      {
-        "card": {
-          "card": {
-            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-            "info": {
-              "id": "382658",
-              "name": "Mohan Sweets",
-              "cloudinaryImageId": "FOOD_CATALOG/IMAGES/CMS/2025/3/19/a107e410-a0ad-449e-bb8d-f41d1390542b_33437ca7-2988-4486-b6b3-9679018cf165.jpg",
-              "locality": "Kurji",
-              "areaName": "Kurji",
-              "costForTwo": "₹250 for two",
-              "cuisines": [
-                "Sweets",
-                "Bakery",
-                "Thalis",
-                "South Indian",
-                "Chinese",
-                "Desserts"
-              ],
-              "avgRating": 3.5,
-              "parentId": "13074",
-              "avgRatingString": "3.5",
-              "totalRatingsString": "788",
-              "promoted": true,
-              "adTrackingId": "cid=31823603~p=2~adgrpid=31823603#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=382658~plpr=COLLECTION~eid=9cbbf448-6e78-4640-9b87-06e9ce66ba7f~srvts=1768403540713~collid=80388",
-              "sla": {
-                "deliveryTime": 41,
-                "lastMileTravel": 9.1,
-                "serviceability": "SERVICEABLE",
-                "slaString": "40-45 mins",
-                "lastMileTravelString": "9.1 km",
-                "iconType": "ICON_TYPE_EMPTY"
-              },
-              "availability": {
-                "nextCloseTime": "2026-01-14 21:15:00",
-                "opened": true
-              },
-              "badges": {
-                "imageBadges": [
-                  {
-                    "imageId": "v1695133679/badges/Pure_Veg111.png",
-                    "description": "pureveg"
-                  }
-                ]
-              },
-              "isOpen": true,
-              "type": "F",
-              "badgesV2": {
-                "entityBadges": {
-                  "textBased": {
-
-                  },
-                  "imageBased": {
-                    "badgeObject": [
-                      {
-                        "attributes": {
-                          "imageId": "v1695133679/badges/Pure_Veg111.png",
-                          "description": "pureveg"
-                        }
-                      }
-                    ]
-                  },
-                  "textExtendedBadges": {
-
-                  }
-                }
-              },
-              "aggregatedDiscountInfoV3": {
-                "header": "20% OFF",
-                "subHeader": "UPTO ₹120",
-                "logoCtx": {
-                  "text": "BENEFITS"
-                }
-              },
-              "orderabilityCommunication": {
-                "title": {
-
-                },
-                "subTitle": {
-
-                },
-                "message": {
-
-                },
-                "customIcon": {
-
-                },
-                "commsStyling": {
-
-                }
-              },
-              "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                  "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                  "lottie": {
-
-                  },
-                  "video": {
-
-                  }
-                }
-              },
-              "reviewsSummary": {
-
-              },
-              "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-              "restaurantOfferPresentationInfo": {
-
-              },
-              "externalRatings": {
-                "aggregatedRating": {
-                  "rating": "3.7",
-                  "ratingCount": "454"
-                },
-                "source": "GOOGLE",
-                "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
-              },
-              "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
-              "campaignId": "31823603"
-            },
-            "analytics": {
-
-            },
-            "cta": {
-              "link": "swiggy://menu?restaurant_id=382658&source=collection&query=Rasgulla",
-              "text": "RESTAURANT_MENU",
-              "type": "DEEPLINK"
-            },
-            "widgetId": "collectionV5RestaurantListWidget"
-          }
-        }
-      },
-      {
-        "card": {
-          "card": {
-            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-            "info": {
-              "id": "729866",
-              "name": "VYANJAN RESTAURANT",
-              "cloudinaryImageId": "fc25b56a5fea99c3390f386bd8a0d705",
-              "locality": "Postal Park Churaha",
-              "areaName": "Kankarbagh",
-              "costForTwo": "₹300 for two",
-              "cuisines": [
-                "Indian",
-                "Chinese"
-              ],
-              "avgRating": 3.8,
-              "parentId": "224688",
-              "avgRatingString": "3.8",
-              "totalRatingsString": "123",
-              "sla": {
-                "deliveryTime": 26,
-                "lastMileTravel": 0.8,
-                "serviceability": "SERVICEABLE",
-                "slaString": "25-30 mins",
-                "lastMileTravelString": "0.8 km",
-                "iconType": "ICON_TYPE_EMPTY"
-              },
-              "availability": {
-                "nextCloseTime": "2026-01-14 23:00:00",
-                "opened": true
-              },
-              "badges": {
-                "imageBadges": [
-                  {
-                    "imageId": "android/static-assets/icons/big_rx.png",
-                    "description": "bolt!"
-                  }
-                ]
-              },
-              "isOpen": true,
-              "type": "F",
-              "badgesV2": {
-                "entityBadges": {
-                  "textBased": {
-
-                  },
-                  "imageBased": {
-                    "badgeObject": [
-                      {
-                        "attributes": {
-                          "imageId": "android/static-assets/icons/big_rx.png",
-                          "description": "bolt!"
-                        }
-                      }
-                    ]
-                  },
-                  "textExtendedBadges": {
-
-                  }
-                }
-              },
-              "aggregatedDiscountInfoV3": {
-                "header": "₹200 OFF",
-                "subHeader": "ABOVE ₹999",
-                "discountTag": "FLAT DEAL",
-                "logoCtx": {
-                  "text": "BENEFITS"
-                }
-              },
-              "orderabilityCommunication": {
-                "title": {
-
-                },
-                "subTitle": {
-
-                },
-                "message": {
-
-                },
-                "customIcon": {
-
-                },
-                "commsStyling": {
-
-                }
-              },
-              "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                  "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                  "lottie": {
-
-                  },
-                  "video": {
-
-                  }
-                }
-              },
-              "reviewsSummary": {
-
-              },
-              "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-              "restaurantOfferPresentationInfo": {
-
-              },
-              "externalRatings": {
-                "aggregatedRating": {
-                  "rating": "--"
-                }
-              },
-              "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-            },
-            "analytics": {
-
-            },
-            "cta": {
-              "link": "swiggy://menu?restaurant_id=729866&source=collection&query=Rasgulla",
-              "text": "RESTAURANT_MENU",
-              "type": "DEEPLINK"
-            },
-            "widgetId": "collectionV5RestaurantListWidget"
-          }
-        }
-      },
-      {
-        "card": {
-          "card": {
-            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-            "info": {
-              "id": "1043073",
-              "name": "Pramod Laddu Bhandar",
-              "cloudinaryImageId": "FOOD_CATALOG/IMAGES/CMS/2025/8/30/fe996428-c3ce-4709-be94-e012ea81b35a_c781a22a-3c51-45cf-9230-ed2130e521f7.jpeg",
-              "locality": "Srikrishnapuri",
-              "areaName": "Frazer Road",
-              "costForTwo": "₹100 for two",
-              "cuisines": [
-                "Desserts",
-                "Sweets"
-              ],
-              "avgRating": 4.7,
-              "veg": true,
-              "parentId": "303291",
-              "avgRatingString": "4.7",
-              "totalRatingsString": "697",
-              "promoted": true,
-              "adTrackingId": "cid=8d7f9abf-8145-499f-b568-f5bbc331ba45~p=4~adgrpid=8d7f9abf-8145-499f-b568-f5bbc331ba45#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=1043073~plpr=COLLECTION~eid=99bbe2ba-6388-478c-bea4-4a54eeeaeedf~srvts=1768403540714~collid=80388",
-              "sla": {
-                "deliveryTime": 29,
-                "lastMileTravel": 3.5,
-                "serviceability": "SERVICEABLE",
-                "slaString": "25-30 mins",
-                "lastMileTravelString": "3.5 km",
-                "iconType": "ICON_TYPE_EMPTY"
-              },
-              "availability": {
-                "nextCloseTime": "2026-01-14 23:59:00",
-                "opened": true
-              },
-              "badges": {
-
-              },
-              "isOpen": true,
-              "type": "F",
-              "badgesV2": {
-                "entityBadges": {
-                  "textExtendedBadges": {
-
-                  },
-                  "textBased": {
-
-                  },
-                  "imageBased": {
-
-                  }
-                }
-              },
-              "aggregatedDiscountInfoV3": {
-                "header": "ITEMS",
-                "subHeader": "AT ₹40",
-                "logoCtx": {
-                  "text": "BENEFITS"
-                }
-              },
-              "orderabilityCommunication": {
-                "title": {
-
-                },
-                "subTitle": {
-
-                },
-                "message": {
-
-                },
-                "customIcon": {
-
-                },
-                "commsStyling": {
-
-                }
-              },
-              "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                  "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                  "lottie": {
-
-                  },
-                  "video": {
-
-                  }
-                }
-              },
-              "reviewsSummary": {
-
-              },
-              "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-              "restaurantOfferPresentationInfo": {
-
-              },
-              "externalRatings": {
-                "aggregatedRating": {
-                  "rating": "--"
-                }
-              },
-              "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
-              "campaignId": "8d7f9abf-8145-499f-b568-f5bbc331ba45"
-            },
-            "analytics": {
-
-            },
-            "cta": {
-              "link": "swiggy://menu?restaurant_id=1043073&source=collection&query=Rasgulla",
-              "text": "RESTAURANT_MENU",
-              "type": "DEEPLINK"
-            },
-            "widgetId": "collectionV5RestaurantListWidget"
-          }
-        }
-      },
-      {
-        "card": {
-          "card": {
-            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-            "info": {
-              "id": "253169",
-              "name": "Bikaner Elite",
-              "cloudinaryImageId": "FOOD_CATALOG/IMAGES/CMS/2025/10/15/d613fc51-a1b6-4d58-b70f-b2b0df9089bc_020e01b3-9fd4-47cd-a97d-7eb24eff6536.JPG",
-              "locality": "Ghrounda",
-              "areaName": "Ghrounda",
-              "costForTwo": "₹449 for two",
-              "cuisines": [
-                "Sweets",
-                "Bakery",
-                "South Indian",
-                "North Indian",
-                "pure veg"
-              ],
-              "avgRating": 4.5,
-              "veg": true,
-              "parentId": "45850",
-              "avgRatingString": "4.5",
-              "totalRatingsString": "16K+",
-              "sla": {
-                "deliveryTime": 23,
-                "lastMileTravel": 2.3,
-                "serviceability": "SERVICEABLE",
-                "slaString": "20-25 mins",
-                "lastMileTravelString": "2.3 km",
-                "iconType": "ICON_TYPE_EMPTY"
-              },
-              "availability": {
-                "nextCloseTime": "2026-01-14 23:59:00",
-                "opened": true
-              },
-              "badges": {
-                "imageBadges": [
-                  {
-                    "imageId": "android/static-assets/icons/big_rx.png",
-                    "description": "bolt!"
+                    attributes: {
+                      imageId: "High%20Protein/rx%20tag%205.png",
+                      description: "High Protein",
+                    },
                   },
                   {
-                    "imageId": "Rxawards/_CATEGORY-Mithai.png",
-                    "description": "Delivery!"
-                  }
-                ]
-              },
-              "isOpen": true,
-              "type": "F",
-              "badgesV2": {
-                "entityBadges": {
-                  "imageBased": {
-                    "badgeObject": [
-                      {
-                        "attributes": {
-                          "imageId": "android/static-assets/icons/big_rx.png",
-                          "description": "bolt!"
-                        }
-                      },
-                      {
-                        "attributes": {
-                          "imageId": "Rxawards/_CATEGORY-Mithai.png",
-                          "description": "Delivery!"
-                        }
-                      }
-                    ]
+                    attributes: {
+                      imageId: "newg.png",
+                      description: "Gourmet",
+                    },
                   },
-                  "textExtendedBadges": {
-
-                  },
-                  "textBased": {
-
-                  }
-                }
+                ],
               },
-              "aggregatedDiscountInfoV3": {
-                "header": "ITEMS",
-                "subHeader": "AT ₹104",
-                "logoCtx": {
-                  "text": "BENEFITS"
-                }
-              },
-              "orderabilityCommunication": {
-                "title": {
-
-                },
-                "subTitle": {
-
-                },
-                "message": {
-
-                },
-                "customIcon": {
-
-                },
-                "commsStyling": {
-
-                }
-              },
-              "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                  "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                  "lottie": {
-
-                  },
-                  "video": {
-
-                  }
-                }
-              },
-              "reviewsSummary": {
-
-              },
-              "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-              "restaurantOfferPresentationInfo": {
-
-              },
-              "externalRatings": {
-                "aggregatedRating": {
-                  "rating": "4.1",
-                  "ratingCount": "2.1K+"
-                },
-                "source": "GOOGLE",
-                "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
-              },
-              "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+              textExtendedBadges: {},
             },
-            "analytics": {
-
+          },
+          aggregatedDiscountInfoV3: {
+            header: "ITEMS",
+            subHeader: "AT ₹59",
+            logoCtx: {
+              text: "BENEFITS",
             },
-            "cta": {
-              "link": "swiggy://menu?restaurant_id=253169&source=collection&query=Rasgulla",
-              "text": "RESTAURANT_MENU",
-              "type": "DEEPLINK"
+            footerText: "3 DEALS LEFT",
+            secondaryHeaderType: "SECONDARY_HEADER_TYPE_USAGE_LIMIT_OFFER",
+          },
+          orderabilityCommunication: {
+            title: {},
+            subTitle: {},
+            message: {},
+            customIcon: {},
+            commsStyling: {},
+          },
+          differentiatedUi: {
+            displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            differentiatedUiMediaDetails: {
+              maxDuration: "3000",
+              mediaType: "ADS_MEDIA_ENUM_IMAGE",
+              lottie: {},
+              video: {},
             },
-            "widgetId": "collectionV5RestaurantListWidget"
-          }
-        }
+          },
+          reviewsSummary: {},
+          displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+          restaurantOfferPresentationInfo: {},
+          externalRatings: {
+            aggregatedRating: {
+              rating: "--",
+            },
+          },
+          ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+          campaignId: "fa4504e8-d4ad-4439-8b2f-0baf50b8b693",
+        },
+        analytics: {},
+        cta: {
+          link: "swiggy://menu?restaurant_id=304640&source=collection&query=Juices",
+          text: "RESTAURANT_MENU",
+          type: "DEEPLINK",
+        },
+        widgetId: "collectionV5RestaurantListWidget_Contextual",
       },
-      {
-        "card": {
-          "card": {
-            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-            "info": {
-              "id": "388381",
-              "name": "AB's - Absolute Barbecues",
-              "cloudinaryImageId": "8c4abcaa7c67e6d2ae9da8e2b53d1d91",
-              "locality": "Fraser Road Area",
-              "areaName": "Fraser Road",
-              "costForTwo": "₹500 for two",
-              "cuisines": [
-                "North Indian",
-                "Barbecue",
-                "Kebabs",
-                "Biryani"
-              ],
-              "avgRating": 3.9,
-              "parentId": "387759",
-              "avgRatingString": "3.9",
-              "totalRatingsString": "709",
-              "promoted": true,
-              "adTrackingId": "cid=6e34a7c5-add2-46e0-8fa2-8ce13d20060f~p=6~adgrpid=6e34a7c5-add2-46e0-8fa2-8ce13d20060f#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=388381~plpr=COLLECTION~eid=9374d937-c288-4269-b5d8-d4423ab22823~srvts=1768403540714~collid=80388",
-              "sla": {
-                "deliveryTime": 31,
-                "lastMileTravel": 2.9,
-                "serviceability": "SERVICEABLE",
-                "slaString": "30-35 mins",
-                "lastMileTravelString": "2.9 km",
-                "iconType": "ICON_TYPE_EMPTY"
-              },
-              "availability": {
-                "nextCloseTime": "2026-01-14 23:00:00",
-                "opened": true
-              },
-              "badges": {
-
-              },
-              "isOpen": true,
-              "type": "F",
-              "badgesV2": {
-                "entityBadges": {
-                  "textBased": {
-
-                  },
-                  "imageBased": {
-
-                  },
-                  "textExtendedBadges": {
-
-                  }
-                }
-              },
-              "aggregatedDiscountInfoV3": {
-                "header": "50% OFF",
-                "discountTag": "FLAT DEAL",
-                "logoCtx": {
-                  "text": "BENEFITS"
-                }
-              },
-              "orderabilityCommunication": {
-                "title": {
-
-                },
-                "subTitle": {
-
-                },
-                "message": {
-
-                },
-                "customIcon": {
-
-                },
-                "commsStyling": {
-
-                }
-              },
-              "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                  "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                  "lottie": {
-
-                  },
-                  "video": {
-
-                  }
-                }
-              },
-              "reviewsSummary": {
-
-              },
-              "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-              "restaurantOfferPresentationInfo": {
-
-              },
-              "externalRatings": {
-                "aggregatedRating": {
-                  "rating": "4.2",
-                  "ratingCount": "5.2K+"
-                },
-                "source": "GOOGLE",
-                "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
-              },
-              "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
-              "campaignId": "6e34a7c5-add2-46e0-8fa2-8ce13d20060f"
-            },
-            "analytics": {
-
-            },
-            "cta": {
-              "link": "swiggy://menu?restaurant_id=388381&source=collection&query=Rasgulla",
-              "text": "RESTAURANT_MENU",
-              "type": "DEEPLINK"
-            },
-            "widgetId": "collectionV5RestaurantListWidget"
-          }
-        }
+      relevance: {
+        type: "RELEVANCE_TYPE_ON_MENU_RETURN",
+        sectionId: "MENU_RETURN_FOOD",
       },
-      {
-        "card": {
-          "card": {
-            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-            "info": {
-              "id": "538275",
-              "name": "Harilal's",
-              "cloudinaryImageId": "ihnigpa6xsreeuwvdcy1",
-              "locality": "Bandar Bagicha",
-              "areaName": "Santosha Complex",
-              "costForTwo": "₹450 for two",
-              "cuisines": [
-                "Sweets",
-                "Bakery"
-              ],
-              "avgRating": 4.4,
-              "veg": true,
-              "parentId": "472621",
-              "avgRatingString": "4.4",
-              "totalRatingsString": "5.7K+",
-              "sla": {
-                "deliveryTime": 28,
-                "lastMileTravel": 2.3,
-                "serviceability": "SERVICEABLE",
-                "slaString": "25-30 mins",
-                "lastMileTravelString": "2.3 km",
-                "iconType": "ICON_TYPE_EMPTY"
+    },
+  },
+  {
+    card: {
+      card: {
+        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+        info: {
+          id: "57039",
+          name: "Blue Tokai Coffee Roasters",
+          cloudinaryImageId:
+            "RX_THUMBNAIL/IMAGES/VENDOR/2025/12/5/e30f4592-afda-4e15-a67c-81434ce3aab4_57039.JPG",
+          locality: "DLF Phase - 4",
+          areaName: "DLF Phase - 4",
+          costForTwo: "₹600 for two",
+          cuisines: ["Cafe", "Coffee", "Beverages"],
+          avgRating: 4.7,
+          parentId: "2682",
+          avgRatingString: "4.7",
+          totalRatingsString: "3.1K+",
+          sla: {
+            deliveryTime: 34,
+            lastMileTravel: 7.2,
+            serviceability: "SERVICEABLE",
+            slaString: "30-40 mins",
+            lastMileTravelString: "7.2 km",
+            iconType: "ICON_TYPE_EMPTY",
+          },
+          availability: {
+            nextCloseTime: "2026-01-24 23:00:00",
+            opened: true,
+          },
+          badges: {
+            imageBadges: [
+              {
+                imageId: "newg.png",
+                description: "Gourmet",
               },
-              "availability": {
-                "nextCloseTime": "2026-01-14 23:59:00",
-                "opened": true
-              },
-              "badges": {
-                "imageBadges": [
+            ],
+          },
+          isOpen: true,
+          type: "F",
+          badgesV2: {
+            entityBadges: {
+              imageBased: {
+                badgeObject: [
                   {
-                    "imageId": "android/static-assets/icons/big_rx.png",
-                    "description": "bolt!"
+                    attributes: {
+                      imageId: "newg.png",
+                      description: "Gourmet",
+                    },
+                  },
+                ],
+              },
+              textExtendedBadges: {},
+              textBased: {},
+            },
+          },
+          aggregatedDiscountInfoV3: {
+            header: "₹75 OFF",
+            subHeader: "ABOVE ₹349",
+            discountTag: "FLAT DEAL",
+            logoCtx: {
+              text: "BENEFITS",
+            },
+          },
+          orderabilityCommunication: {
+            title: {},
+            subTitle: {},
+            message: {},
+            customIcon: {},
+            commsStyling: {},
+          },
+          differentiatedUi: {
+            displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            differentiatedUiMediaDetails: {
+              maxDuration: "3000",
+              mediaType: "ADS_MEDIA_ENUM_IMAGE",
+              lottie: {},
+              video: {},
+            },
+          },
+          reviewsSummary: {},
+          displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+          restaurantOfferPresentationInfo: {},
+          externalRatings: {
+            aggregatedRating: {
+              rating: "4.4",
+              ratingCount: "753",
+            },
+            source: "GOOGLE",
+            sourceIconImageId: "v1704440323/google_ratings/rating_google_tag",
+          },
+          ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+        },
+        analytics: {},
+        cta: {
+          link: "swiggy://menu?restaurant_id=57039&source=collection&query=Juices",
+          text: "RESTAURANT_MENU",
+          type: "DEEPLINK",
+        },
+        widgetId: "collectionV5RestaurantListWidget_Contextual",
+      },
+      relevance: {
+        type: "RELEVANCE_TYPE_ON_MENU_RETURN",
+        sectionId: "MENU_RETURN_FOOD",
+      },
+    },
+  },
+  {
+    card: {
+      card: {
+        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+        info: {
+          id: "25763",
+          name: "Falhari - A Fruitful Habit",
+          cloudinaryImageId: "irqp9yxmgbnslcreowc7",
+          locality: "DLF Phase - 5",
+          areaName: "New DLF Phase 4",
+          costForTwo: "₹250 for two",
+          cuisines: [
+            "Healthy Food",
+            "Beverages",
+            "Salads",
+            "Desserts",
+            "Ice Cream",
+          ],
+          avgRating: 4.5,
+          veg: true,
+          parentId: "13818",
+          avgRatingString: "4.5",
+          totalRatingsString: "13K+",
+          promoted: true,
+          adTrackingId:
+            "cid=4b7a4ab4-23e5-45dd-9873-40edbbb13f4f~p=3~adgrpid=4b7a4ab4-23e5-45dd-9873-40edbbb13f4f#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=25763~plpr=COLLECTION~eid=3c8d4a03-ed39-4774-b239-946eeb6dab58~srvts=1769227960494~collid=80445",
+          sla: {
+            deliveryTime: 40,
+            lastMileTravel: 7.6,
+            serviceability: "SERVICEABLE",
+            slaString: "40-50 mins",
+            lastMileTravelString: "7.6 km",
+            iconType: "ICON_TYPE_EMPTY",
+          },
+          availability: {
+            nextCloseTime: "2026-01-25 03:00:00",
+            opened: true,
+          },
+          badges: {},
+          isOpen: true,
+          type: "F",
+          badgesV2: {
+            entityBadges: {
+              textBased: {},
+              imageBased: {},
+              textExtendedBadges: {},
+            },
+          },
+          aggregatedDiscountInfoV3: {
+            header: "ITEMS",
+            subHeader: "AT ₹29",
+            logoCtx: {
+              text: "BENEFITS",
+            },
+          },
+          orderabilityCommunication: {
+            title: {},
+            subTitle: {},
+            message: {},
+            customIcon: {},
+            commsStyling: {},
+          },
+          differentiatedUi: {
+            displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            differentiatedUiMediaDetails: {
+              maxDuration: "3000",
+              mediaType: "ADS_MEDIA_ENUM_IMAGE",
+              lottie: {},
+              video: {},
+            },
+          },
+          reviewsSummary: {},
+          displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+          restaurantOfferPresentationInfo: {},
+          externalRatings: {
+            aggregatedRating: {
+              rating: "--",
+            },
+          },
+          ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+          campaignId: "4b7a4ab4-23e5-45dd-9873-40edbbb13f4f",
+        },
+        analytics: {},
+        cta: {
+          link: "swiggy://menu?restaurant_id=25763&source=collection&query=Juices",
+          text: "RESTAURANT_MENU",
+          type: "DEEPLINK",
+        },
+        widgetId: "collectionV5RestaurantListWidget_Contextual",
+      },
+      relevance: {
+        type: "RELEVANCE_TYPE_ON_MENU_RETURN",
+        sectionId: "MENU_RETURN_FOOD",
+      },
+    },
+  },
+  {
+    card: {
+      card: {
+        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+        info: {
+          id: "502455",
+          name: "Suchali's Artisan Bakehouse",
+          cloudinaryImageId:
+            "RX_THUMBNAIL/IMAGES/VENDOR/2025/12/5/ee944c84-52f8-45fc-822e-e6ec5f0e4a34_502455.JPG",
+          locality: "Galleria Unit 2",
+          areaName: "Galleria Unit 2",
+          costForTwo: "₹600 for two",
+          cuisines: ["Bakery", "Desserts", "Beverages"],
+          avgRating: 4.8,
+          parentId: "196351",
+          avgRatingString: "4.8",
+          totalRatingsString: "909",
+          sla: {
+            deliveryTime: 33,
+            lastMileTravel: 7.2,
+            serviceability: "SERVICEABLE",
+            slaString: "30-40 mins",
+            lastMileTravelString: "7.2 km",
+            iconType: "ICON_TYPE_EMPTY",
+          },
+          availability: {
+            nextCloseTime: "2026-01-24 23:00:00",
+            opened: true,
+          },
+          badges: {
+            imageBadges: [
+              {
+                imageId: "newg.png",
+                description: "Gourmet",
+              },
+            ],
+          },
+          isOpen: true,
+          type: "F",
+          badgesV2: {
+            entityBadges: {
+              textBased: {},
+              imageBased: {
+                badgeObject: [
+                  {
+                    attributes: {
+                      imageId: "newg.png",
+                      description: "Gourmet",
+                    },
+                  },
+                ],
+              },
+              textExtendedBadges: {},
+            },
+          },
+          aggregatedDiscountInfoV3: {
+            header: "₹75 OFF",
+            subHeader: "ABOVE ₹349",
+            discountTag: "FLAT DEAL",
+            logoCtx: {
+              text: "BENEFITS",
+            },
+          },
+          orderabilityCommunication: {
+            title: {},
+            subTitle: {},
+            message: {},
+            customIcon: {},
+            commsStyling: {},
+          },
+          differentiatedUi: {
+            displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            differentiatedUiMediaDetails: {
+              maxDuration: "3000",
+              mediaType: "ADS_MEDIA_ENUM_IMAGE",
+              lottie: {},
+              video: {},
+            },
+          },
+          reviewsSummary: {},
+          displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+          restaurantOfferPresentationInfo: {},
+          externalRatings: {
+            aggregatedRating: {
+              rating: "--",
+            },
+          },
+          ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+        },
+        analytics: {},
+        cta: {
+          link: "swiggy://menu?restaurant_id=502455&source=collection&query=Juices",
+          text: "RESTAURANT_MENU",
+          type: "DEEPLINK",
+        },
+        widgetId: "collectionV5RestaurantListWidget_Contextual",
+      },
+      relevance: {
+        type: "RELEVANCE_TYPE_ON_MENU_RETURN",
+        sectionId: "MENU_RETURN_FOOD",
+      },
+    },
+  },
+  {
+    card: {
+      card: {
+        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+        info: {
+          id: "617838",
+          name: "Healthy Gym Diet",
+          cloudinaryImageId:
+            "FOOD_CATALOG/IMAGES/CMS/2025/3/11/8bd443de-dde5-4317-b8ae-dcb7972bec78_64eef042-5e99-4158-a818-726d241119c3.webp",
+          locality: "Shamshpur",
+          areaName: "Jalvayu Towers",
+          costForTwo: "₹499 for two",
+          cuisines: ["Healthy Food", "Salad", "Indian", "Beverages"],
+          avgRating: 4.4,
+          parentId: "368221",
+          avgRatingString: "4.4",
+          totalRatingsString: "343",
+          sla: {
+            deliveryTime: 39,
+            lastMileTravel: 7,
+            serviceability: "SERVICEABLE",
+            slaString: "35-40 mins",
+            lastMileTravelString: "7.0 km",
+            iconType: "ICON_TYPE_EMPTY",
+          },
+          availability: {
+            nextCloseTime: "2026-01-24 23:59:00",
+            opened: true,
+          },
+          badges: {
+            imageBadges: [
+              {
+                imageId: "High%20Protein/rx%20tag%205.png",
+                description: "High Protein",
+              },
+            ],
+          },
+          isOpen: true,
+          type: "F",
+          badgesV2: {
+            entityBadges: {
+              imageBased: {
+                badgeObject: [
+                  {
+                    attributes: {
+                      imageId: "High%20Protein/rx%20tag%205.png",
+                      description: "High Protein",
+                    },
+                  },
+                ],
+              },
+              textExtendedBadges: {},
+              textBased: {},
+            },
+          },
+          aggregatedDiscountInfoV3: {
+            header: "₹100 OFF",
+            subHeader: "ABOVE ₹199",
+            discountTag: "FLAT DEAL",
+            logoCtx: {
+              text: "BENEFITS",
+            },
+          },
+          orderabilityCommunication: {
+            title: {},
+            subTitle: {},
+            message: {},
+            customIcon: {},
+            commsStyling: {},
+          },
+          differentiatedUi: {
+            displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            differentiatedUiMediaDetails: {
+              maxDuration: "3000",
+              mediaType: "ADS_MEDIA_ENUM_IMAGE",
+              lottie: {},
+              video: {},
+            },
+          },
+          reviewsSummary: {},
+          displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+          restaurantOfferPresentationInfo: {},
+          externalRatings: {
+            aggregatedRating: {
+              rating: "--",
+            },
+          },
+          ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+        },
+        analytics: {},
+        cta: {
+          link: "swiggy://menu?restaurant_id=617838&source=collection&query=Juices",
+          text: "RESTAURANT_MENU",
+          type: "DEEPLINK",
+        },
+        widgetId: "collectionV5RestaurantListWidget_Contextual",
+      },
+      relevance: {
+        type: "RELEVANCE_TYPE_ON_MENU_RETURN",
+        sectionId: "MENU_RETURN_FOOD",
+      },
+    },
+  },
+  {
+    card: {
+      card: {
+        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+        info: {
+          id: "152827",
+          name: "Lord Of The Juices",
+          cloudinaryImageId:
+            "FOOD_CATALOG/IMAGES/CMS/2025/8/27/0842b662-4c65-4bc1-ba3e-5163766ed4c4_29e28e42-89d3-4310-9495-35dd86d78787.jpg",
+          locality: "Vyapar Kendra",
+          areaName: "Sushant Lok",
+          costForTwo: "₹300 for two",
+          cuisines: [
+            "Juices",
+            "Beverages",
+            "Salads",
+            "Pastas",
+            "Chinese",
+            "Healthy Food",
+          ],
+          avgRating: 4.5,
+          parentId: "126047",
+          avgRatingString: "4.5",
+          totalRatingsString: "2.1K+",
+          sla: {
+            deliveryTime: 38,
+            lastMileTravel: 9,
+            serviceability: "SERVICEABLE",
+            slaString: "35-40 mins",
+            lastMileTravelString: "9.0 km",
+            iconType: "ICON_TYPE_EMPTY",
+          },
+          availability: {
+            nextCloseTime: "2026-01-25 01:00:00",
+            opened: true,
+          },
+          badges: {},
+          isOpen: true,
+          type: "F",
+          badgesV2: {
+            entityBadges: {
+              textBased: {},
+              imageBased: {},
+              textExtendedBadges: {},
+            },
+          },
+          aggregatedDiscountInfoV3: {
+            header: "₹300 OFF",
+            subHeader: "ABOVE ₹799",
+            discountTag: "FLAT DEAL",
+            logoCtx: {
+              text: "BENEFITS",
+            },
+          },
+          orderabilityCommunication: {
+            title: {},
+            subTitle: {},
+            message: {},
+            customIcon: {},
+            commsStyling: {},
+          },
+          differentiatedUi: {
+            displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            differentiatedUiMediaDetails: {
+              maxDuration: "3000",
+              mediaType: "ADS_MEDIA_ENUM_IMAGE",
+              lottie: {},
+              video: {},
+            },
+          },
+          reviewsSummary: {},
+          displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+          restaurantOfferPresentationInfo: {},
+          externalRatings: {
+            aggregatedRating: {
+              rating: "4.3",
+              ratingCount: "124",
+            },
+            source: "GOOGLE",
+            sourceIconImageId: "v1704440323/google_ratings/rating_google_tag",
+          },
+          ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+        },
+        analytics: {},
+        cta: {
+          link: "swiggy://menu?restaurant_id=152827&source=collection&query=Juices",
+          text: "RESTAURANT_MENU",
+          type: "DEEPLINK",
+        },
+        widgetId: "collectionV5RestaurantListWidget_Contextual",
+      },
+      relevance: {
+        type: "RELEVANCE_TYPE_ON_MENU_RETURN",
+        sectionId: "MENU_RETURN_FOOD",
+      },
+    },
+  },
+  {
+    card: {
+      card: {
+        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+        info: {
+          id: "451009",
+          name: "Healthy Buy",
+          cloudinaryImageId:
+            "FOOD_CATALOG/IMAGES/CMS/2026/1/19/a98b745d-5603-4a3d-89af-af553b769cc2_f9a6847b-40a5-41b4-bb2b-c643e1d098dc.jpg",
+          locality: "Sector 7",
+          areaName: " Krishna colony",
+          costForTwo: "₹500 for two",
+          cuisines: ["Beverages", "Salads", "Snacks"],
+          avgRating: 4.4,
+          parentId: "273193",
+          avgRatingString: "4.4",
+          totalRatingsString: "39",
+          sla: {
+            deliveryTime: 35,
+            lastMileTravel: 1.7,
+            serviceability: "SERVICEABLE",
+            slaString: "30-35 mins",
+            lastMileTravelString: "1.7 km",
+            iconType: "ICON_TYPE_EMPTY",
+          },
+          availability: {
+            nextCloseTime: "2026-01-24 12:00:00",
+            opened: true,
+          },
+          badges: {
+            imageBadges: [
+              {
+                imageId: "android/static-assets/icons/big_rx.png",
+                description: "bolt!",
+              },
+              {
+                imageId: "v1695133679/badges/Pure_Veg111.png",
+                description: "pureveg",
+              },
+            ],
+          },
+          isOpen: true,
+          aggregatedDiscountInfoV2: {},
+          type: "F",
+          badgesV2: {
+            entityBadges: {
+              imageBased: {
+                badgeObject: [
+                  {
+                    attributes: {
+                      imageId: "android/static-assets/icons/big_rx.png",
+                      description: "bolt!",
+                    },
                   },
                   {
-                    "imageId": "Rxawards/_CATEGORY-Mithai.png",
-                    "description": "Delivery!"
-                  }
-                ]
-              },
-              "isOpen": true,
-              "type": "F",
-              "badgesV2": {
-                "entityBadges": {
-                  "textExtendedBadges": {
-
+                    attributes: {
+                      imageId: "v1695133679/badges/Pure_Veg111.png",
+                      description: "pureveg",
+                    },
                   },
-                  "textBased": {
-
-                  },
-                  "imageBased": {
-                    "badgeObject": [
-                      {
-                        "attributes": {
-                          "imageId": "android/static-assets/icons/big_rx.png",
-                          "description": "bolt!"
-                        }
-                      },
-                      {
-                        "attributes": {
-                          "description": "Delivery!",
-                          "imageId": "Rxawards/_CATEGORY-Mithai.png"
-                        }
-                      }
-                    ]
-                  }
-                }
+                ],
               },
-              "aggregatedDiscountInfoV3": {
-                "header": "ITEMS",
-                "subHeader": "AT ₹45",
-                "logoCtx": {
-                  "text": "BENEFITS"
-                }
-              },
-              "orderabilityCommunication": {
-                "title": {
-
-                },
-                "subTitle": {
-
-                },
-                "message": {
-
-                },
-                "customIcon": {
-
-                },
-                "commsStyling": {
-
-                }
-              },
-              "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                  "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                  "lottie": {
-
-                  },
-                  "video": {
-
-                  }
-                }
-              },
-              "reviewsSummary": {
-
-              },
-              "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-              "restaurantOfferPresentationInfo": {
-
-              },
-              "externalRatings": {
-                "aggregatedRating": {
-                  "rating": "--"
-                }
-              },
-              "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+              textExtendedBadges: {},
+              textBased: {},
             },
-            "analytics": {
-
+          },
+          orderabilityCommunication: {
+            title: {},
+            subTitle: {},
+            message: {},
+            customIcon: {},
+            commsStyling: {},
+          },
+          differentiatedUi: {
+            displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            differentiatedUiMediaDetails: {
+              maxDuration: "3000",
+              mediaType: "ADS_MEDIA_ENUM_IMAGE",
+              lottie: {},
+              video: {},
             },
-            "cta": {
-              "link": "swiggy://menu?restaurant_id=538275&source=collection&query=Rasgulla",
-              "text": "RESTAURANT_MENU",
-              "type": "DEEPLINK"
+          },
+          reviewsSummary: {},
+          displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+          restaurantOfferPresentationInfo: {},
+          externalRatings: {
+            aggregatedRating: {
+              rating: "5.0",
+              ratingCount: "299",
             },
-            "widgetId": "collectionV5RestaurantListWidget"
-          }
-        }
+            source: "GOOGLE",
+            sourceIconImageId: "v1704440323/google_ratings/rating_google_tag",
+          },
+          ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+        },
+        analytics: {},
+        cta: {
+          link: "swiggy://menu?restaurant_id=451009&source=collection&query=Juices",
+          text: "RESTAURANT_MENU",
+          type: "DEEPLINK",
+        },
+        widgetId: "collectionV5RestaurantListWidget_Contextual",
       },
-      {
-        "card": {
-          "card": {
-            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-            "info": {
-              "id": "1041297",
-              "name": "Tahalka Kitchen",
-              "cloudinaryImageId": "FOOD_CATALOG/IMAGES/CMS/2025/2/9/99324645-e41e-4e8b-8508-6ece259aeb37_38264a49-b226-4007-b357-0c66ff2d7a0f.jpg",
-              "locality": "Srikrishnapuri",
-              "areaName": "Srikrishnapuri",
-              "costForTwo": "₹200 for two",
-              "cuisines": [
-                "Chinese",
-                "Fast Food",
-                "North Indian"
-              ],
-              "avgRating": 3.4,
-              "parentId": "531028",
-              "avgRatingString": "3.4",
-              "totalRatingsString": "134",
-              "promoted": true,
-              "adTrackingId": "cid=73480ca7-8060-4aae-a3eb-51ba951d820c~p=7~adgrpid=73480ca7-8060-4aae-a3eb-51ba951d820c#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=1041297~plpr=COLLECTION~eid=df0cc899-0b7e-48ff-a538-1d166dac5c40~srvts=1768403540714~collid=80388",
-              "sla": {
-                "deliveryTime": 46,
-                "lastMileTravel": 5.6,
-                "serviceability": "SERVICEABLE",
-                "slaString": "45-55 mins",
-                "lastMileTravelString": "5.6 km",
-                "iconType": "ICON_TYPE_EMPTY"
-              },
-              "availability": {
-                "nextCloseTime": "2026-01-14 23:30:00",
-                "opened": true
-              },
-              "badges": {
-
-              },
-              "isOpen": true,
-              "type": "F",
-              "badgesV2": {
-                "entityBadges": {
-                  "textBased": {
-
-                  },
-                  "imageBased": {
-
-                  },
-                  "textExtendedBadges": {
-
-                  }
-                }
-              },
-              "aggregatedDiscountInfoV3": {
-                "header": "ITEMS",
-                "subHeader": "AT ₹19",
-                "logoCtx": {
-                  "text": "BENEFITS"
-                }
-              },
-              "orderabilityCommunication": {
-                "title": {
-
-                },
-                "subTitle": {
-
-                },
-                "message": {
-
-                },
-                "customIcon": {
-
-                },
-                "commsStyling": {
-
-                }
-              },
-              "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                  "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                  "lottie": {
-
-                  },
-                  "video": {
-
-                  }
-                }
-              },
-              "reviewsSummary": {
-
-              },
-              "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-              "restaurantOfferPresentationInfo": {
-
-              },
-              "externalRatings": {
-                "aggregatedRating": {
-                  "rating": "--"
-                }
-              },
-              "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
-              "campaignId": "73480ca7-8060-4aae-a3eb-51ba951d820c"
-            },
-            "analytics": {
-
-            },
-            "cta": {
-              "link": "swiggy://menu?restaurant_id=1041297&source=collection&query=Rasgulla",
-              "text": "RESTAURANT_MENU",
-              "type": "DEEPLINK"
-            },
-            "widgetId": "collectionV5RestaurantListWidget"
-          }
-        }
+      relevance: {
+        type: "RELEVANCE_TYPE_ON_MENU_RETURN",
+        sectionId: "MENU_RETURN_FOOD",
       },
-      {
-        "card": {
-          "card": {
-            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-            "info": {
-              "id": "1015157",
-              "name": "Shiva Chhappan Bhog",
-              "cloudinaryImageId": "FOOD_CATALOG/IMAGES/CMS/2024/7/5/29c30401-4cd0-4eaf-b047-de27ab90e47d_0ef26a58-6169-44d2-b346-e9f0aabf6bc7.jpg",
-              "locality": "Kankarbagh",
-              "areaName": "Kankarbagh",
-              "costForTwo": "₹500 for two",
-              "cuisines": [
-                "Desserts",
-                "Chaat",
-                "Bakery",
-                "Sweets",
-                "Snacks"
-              ],
-              "avgRating": 4.2,
-              "veg": true,
-              "parentId": "438013",
-              "avgRatingString": "4.2",
-              "totalRatingsString": "195",
-              "sla": {
-                "deliveryTime": 21,
-                "lastMileTravel": 2.5,
-                "serviceability": "SERVICEABLE",
-                "slaString": "20-25 mins",
-                "lastMileTravelString": "2.5 km",
-                "iconType": "ICON_TYPE_EMPTY"
-              },
-              "availability": {
-                "nextCloseTime": "2026-01-14 21:30:00",
-                "opened": true
-              },
-              "badges": {
-
-              },
-              "isOpen": true,
-              "type": "F",
-              "badgesV2": {
-                "entityBadges": {
-                  "textExtendedBadges": {
-
-                  },
-                  "textBased": {
-
-                  },
-                  "imageBased": {
-
-                  }
-                }
-              },
-              "aggregatedDiscountInfoV3": {
-                "header": "ITEMS",
-                "subHeader": "AT ₹69",
-                "logoCtx": {
-                  "text": "BENEFITS"
-                }
-              },
-              "orderabilityCommunication": {
-                "title": {
-
-                },
-                "subTitle": {
-
-                },
-                "message": {
-
-                },
-                "customIcon": {
-
-                },
-                "commsStyling": {
-
-                }
-              },
-              "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                  "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                  "lottie": {
-
-                  },
-                  "video": {
-
-                  }
-                }
-              },
-              "reviewsSummary": {
-
-              },
-              "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-              "restaurantOfferPresentationInfo": {
-
-              },
-              "externalRatings": {
-                "aggregatedRating": {
-                  "rating": "--"
-                }
-              },
-              "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+    },
+  },
+  {
+    card: {
+      card: {
+        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+        info: {
+          id: "317612",
+          name: "Crudo Juicery & Salad Bar ",
+          cloudinaryImageId: "3e5813d655697be45732df942a402328",
+          locality: "DLF Galleria",
+          areaName: "DLF Phase 4",
+          costForTwo: "₹500 for two",
+          cuisines: ["Salads", "Juices", "Continental", "Beverages"],
+          avgRating: 4.7,
+          parentId: "11898",
+          avgRatingString: "4.7",
+          totalRatingsString: "714",
+          sla: {
+            deliveryTime: 43,
+            lastMileTravel: 7.9,
+            serviceability: "SERVICEABLE",
+            slaString: "40-45 mins",
+            lastMileTravelString: "7.9 km",
+            iconType: "ICON_TYPE_EMPTY",
+          },
+          availability: {
+            nextCloseTime: "2026-01-24 23:00:00",
+            opened: true,
+          },
+          badges: {},
+          isOpen: true,
+          aggregatedDiscountInfoV2: {},
+          type: "F",
+          badgesV2: {
+            entityBadges: {
+              textBased: {},
+              imageBased: {},
+              textExtendedBadges: {},
             },
-            "analytics": {
-
+          },
+          orderabilityCommunication: {
+            title: {},
+            subTitle: {},
+            message: {},
+            customIcon: {},
+            commsStyling: {},
+          },
+          differentiatedUi: {
+            displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            differentiatedUiMediaDetails: {
+              maxDuration: "3000",
+              mediaType: "ADS_MEDIA_ENUM_IMAGE",
+              lottie: {},
+              video: {},
             },
-            "cta": {
-              "link": "swiggy://menu?restaurant_id=1015157&source=collection&query=Rasgulla",
-              "text": "RESTAURANT_MENU",
-              "type": "DEEPLINK"
+          },
+          reviewsSummary: {},
+          displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+          restaurantOfferPresentationInfo: {},
+          externalRatings: {
+            aggregatedRating: {
+              rating: "--",
             },
-            "widgetId": "collectionV5RestaurantListWidget"
-          }
-        }
+          },
+          ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+        },
+        analytics: {},
+        cta: {
+          link: "swiggy://menu?restaurant_id=317612&source=collection&query=Juices",
+          text: "RESTAURANT_MENU",
+          type: "DEEPLINK",
+        },
+        widgetId: "collectionV5RestaurantListWidget_Contextual",
       },
-      {
-        "card": {
-          "card": {
-            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-            "info": {
-              "id": "283214",
-              "name": "Express By AB'S",
-              "cloudinaryImageId": "e15a143849223bbac2f074dc8a523d07",
-              "locality": "Fraser Road Area",
-              "areaName": "Fraser Road",
-              "costForTwo": "₹300 for two",
-              "cuisines": [
-                "North Indian",
-                "Barbecue",
-                "Kebabs",
-                "Biryani"
-              ],
-              "avgRating": 4.1,
-              "parentId": "10320",
-              "avgRatingString": "4.1",
-              "totalRatingsString": "942",
-              "promoted": true,
-              "adTrackingId": "cid=7fc3f0ee-1f3d-4f3e-8fca-80ab0bd77d63~p=8~adgrpid=7fc3f0ee-1f3d-4f3e-8fca-80ab0bd77d63#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=283214~plpr=COLLECTION~eid=38843ba9-3242-4e27-b9ab-f34c36ff3521~srvts=1768403540714~collid=80388",
-              "sla": {
-                "deliveryTime": 29,
-                "lastMileTravel": 2.9,
-                "serviceability": "SERVICEABLE",
-                "slaString": "25-30 mins",
-                "lastMileTravelString": "2.9 km",
-                "iconType": "ICON_TYPE_EMPTY"
-              },
-              "availability": {
-                "nextCloseTime": "2026-01-14 23:00:00",
-                "opened": true
-              },
-              "badges": {
-
-              },
-              "isOpen": true,
-              "type": "F",
-              "badgesV2": {
-                "entityBadges": {
-                  "imageBased": {
-
-                  },
-                  "textExtendedBadges": {
-
-                  },
-                  "textBased": {
-
-                  }
-                }
-              },
-              "aggregatedDiscountInfoV3": {
-                "header": "50% OFF",
-                "discountTag": "FLAT DEAL",
-                "logoCtx": {
-                  "text": "BENEFITS"
-                }
-              },
-              "orderabilityCommunication": {
-                "title": {
-
-                },
-                "subTitle": {
-
-                },
-                "message": {
-
-                },
-                "customIcon": {
-
-                },
-                "commsStyling": {
-
-                }
-              },
-              "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                  "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                  "lottie": {
-
-                  },
-                  "video": {
-
-                  }
-                }
-              },
-              "reviewsSummary": {
-
-              },
-              "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-              "restaurantOfferPresentationInfo": {
-
-              },
-              "externalRatings": {
-                "aggregatedRating": {
-                  "rating": "4.2",
-                  "ratingCount": "5.2K+"
-                },
-                "source": "GOOGLE",
-                "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
-              },
-              "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
-              "campaignId": "7fc3f0ee-1f3d-4f3e-8fca-80ab0bd77d63"
+      relevance: {
+        type: "RELEVANCE_TYPE_ON_MENU_RETURN",
+        sectionId: "MENU_RETURN_FOOD",
+      },
+    },
+  },
+  {
+    card: {
+      card: {
+        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+        info: {
+          id: "573494",
+          name: "Juice Shot",
+          cloudinaryImageId: "dz8ohawzp1e4rmwhnqcp",
+          locality: "DLF phase -4",
+          areaName: "DLF Phase 4",
+          costForTwo: "₹300 for two",
+          cuisines: ["Juices", "Beverages"],
+          avgRating: 4,
+          parentId: "248215",
+          avgRatingString: "4.0",
+          totalRatingsString: "33",
+          sla: {
+            deliveryTime: 39,
+            lastMileTravel: 7.2,
+            serviceability: "SERVICEABLE",
+            slaString: "35-40 mins",
+            lastMileTravelString: "7.2 km",
+            iconType: "ICON_TYPE_EMPTY",
+          },
+          availability: {
+            nextCloseTime: "2026-01-25 01:00:00",
+            opened: true,
+          },
+          badges: {},
+          isOpen: true,
+          type: "F",
+          badgesV2: {
+            entityBadges: {
+              textBased: {},
+              imageBased: {},
+              textExtendedBadges: {},
             },
-            "analytics": {
-
+          },
+          aggregatedDiscountInfoV3: {
+            header: "60% OFF",
+            subHeader: "UPTO ₹115",
+            logoCtx: {
+              text: "BENEFITS",
             },
-            "cta": {
-              "link": "swiggy://menu?restaurant_id=283214&source=collection&query=Rasgulla",
-              "text": "RESTAURANT_MENU",
-              "type": "DEEPLINK"
+          },
+          orderabilityCommunication: {
+            title: {},
+            subTitle: {},
+            message: {},
+            customIcon: {},
+            commsStyling: {},
+          },
+          differentiatedUi: {
+            displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            differentiatedUiMediaDetails: {
+              maxDuration: "3000",
+              mediaType: "ADS_MEDIA_ENUM_IMAGE",
+              lottie: {},
+              video: {},
             },
-            "widgetId": "collectionV5RestaurantListWidget"
-          }
-        }
-      }
-    ]
-
-export default resList;
+          },
+          reviewsSummary: {},
+          displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+          restaurantOfferPresentationInfo: {},
+          externalRatings: {
+            aggregatedRating: {
+              rating: "--",
+            },
+          },
+          ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+        },
+        analytics: {},
+        cta: {
+          link: "swiggy://menu?restaurant_id=573494&source=collection&query=Juices",
+          text: "RESTAURANT_MENU",
+          type: "DEEPLINK",
+        },
+        widgetId: "collectionV5RestaurantListWidget_Contextual",
+      },
+      relevance: {
+        type: "RELEVANCE_TYPE_ON_MENU_RETURN",
+        sectionId: "MENU_RETURN_FOOD",
+      },
+    },
+  },
+  {
+    card: {
+      card: {
+        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+        info: {
+          id: "309375",
+          name: "Saladify",
+          cloudinaryImageId: "iyca9zvxvd2j98bhbpl4",
+          locality: "DLF phase -4",
+          areaName: "New DLF Phase 4",
+          costForTwo: "₹300 for two",
+          cuisines: ["Salads"],
+          avgRating: 4.1,
+          parentId: "11646",
+          avgRatingString: "4.1",
+          totalRatingsString: "43",
+          sla: {
+            deliveryTime: 38,
+            lastMileTravel: 7.1,
+            serviceability: "SERVICEABLE",
+            slaString: "35-40 mins",
+            lastMileTravelString: "7.1 km",
+            iconType: "ICON_TYPE_EMPTY",
+          },
+          availability: {
+            nextCloseTime: "2026-01-25 01:00:00",
+            opened: true,
+          },
+          badges: {
+            imageBadges: [
+              {
+                imageId: "High%20Protein/rx%20tag%205.png",
+                description: "High Protein",
+              },
+            ],
+          },
+          isOpen: true,
+          type: "F",
+          badgesV2: {
+            entityBadges: {
+              textExtendedBadges: {},
+              textBased: {},
+              imageBased: {
+                badgeObject: [
+                  {
+                    attributes: {
+                      imageId: "High%20Protein/rx%20tag%205.png",
+                      description: "High Protein",
+                    },
+                  },
+                ],
+              },
+            },
+          },
+          aggregatedDiscountInfoV3: {
+            header: "60% OFF",
+            subHeader: "UPTO ₹115",
+            logoCtx: {
+              text: "BENEFITS",
+            },
+          },
+          orderabilityCommunication: {
+            title: {},
+            subTitle: {},
+            message: {},
+            customIcon: {},
+            commsStyling: {},
+          },
+          differentiatedUi: {
+            displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            differentiatedUiMediaDetails: {
+              maxDuration: "3000",
+              mediaType: "ADS_MEDIA_ENUM_IMAGE",
+              lottie: {},
+              video: {},
+            },
+          },
+          reviewsSummary: {},
+          displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+          restaurantOfferPresentationInfo: {},
+          externalRatings: {
+            aggregatedRating: {
+              rating: "--",
+            },
+          },
+          ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+        },
+        analytics: {},
+        cta: {
+          link: "swiggy://menu?restaurant_id=309375&source=collection&query=Juices",
+          text: "RESTAURANT_MENU",
+          type: "DEEPLINK",
+        },
+        widgetId: "collectionV5RestaurantListWidget_Contextual",
+      },
+      relevance: {
+        type: "RELEVANCE_TYPE_ON_MENU_RETURN",
+        sectionId: "MENU_RETURN_FOOD",
+      },
+    },
+  },
+];

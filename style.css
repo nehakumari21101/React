@@ -27,17 +27,22 @@
 }
 
 .nav-items{
-    margin-right: 8rem;
+    /* margin-right: 8rem; */
+    /* border: 2px solid red; */
 }
 
 .nav-items ul{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red; */
 }
 
 .nav-items ul>li{
     list-style: none;
     margin-left: 2rem;
     font-size: 1.05em;
+    /* border: 2px solid red; */
 }
 
 .body{
@@ -45,8 +50,14 @@
     /* display: flex; */
 }
 
-button{
+
+.search{
+    display: flex;
     margin: 2rem 5rem;
+    justify-content: space-between;
+}
+button{
+    /* margin: 2rem 5rem; */
     /* border: 2px solid #f0f0f0; */
 }
 
