@@ -76,10 +76,10 @@ const Body = () => {
       <div className="rest-container">
         {restaurantList.map((rest) => (
           <RestaurantCard resData={rest.info} key={rest.info.id}/>
-          // console.log(rest.info)
         ))}
       </div>
-    </div>
+    </div>  
+    
   );
 };
 
