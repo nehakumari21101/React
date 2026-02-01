@@ -1,4 +1,4 @@
-import React from "react";
+import React, { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -6,6 +6,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Error from "./components/Error";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import RestaurantMenu from "./components/RestaurantMenu";
 
 // Core React Element
 // const heading = React.createElement(
@@ -18,7 +19,7 @@ const Applayout = () => {
   return (
     <>
       <Header />
-      <Outlet/>
+      <Outlet />
     </>
   );
 };
@@ -30,7 +31,7 @@ const appRouter = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Body/>
+        element: <Body />,
       },
       {
         path: "/about",
@@ -40,6 +41,10 @@ const appRouter = createBrowserRouter([
         path: "/contact",
         element: <Contact />,
       },
+      {
+        path: "/restaurants/:id",
+        element: <RestaurantMenu/>,
+      },
     ],
     errorElement: <Error />,
   },
@@ -47,4 +52,8 @@ const appRouter = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<RouterProvider router={appRouter} />);
+root.render(
+  <StrictMode>
+    <RouterProvider router={appRouter} />
+  </StrictMode>,
+);
